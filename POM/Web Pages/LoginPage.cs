@@ -25,18 +25,18 @@ namespace POM
         public By NU = By.LinkText("New User Register Here");
         #endregion
 
-        public void login(string url,string name,string Pass,string expected ,string loc)
+        public void login(string url,string expected ,string loc)
              {
           //string url = ConfigurationManager.AppSettings["URL"].ToString();
            driver.Url = url;
-            //string sAttr1 = ConfigurationManager.AppSettings.Get("Username");
-            //string sAttr2 = ConfigurationManager.AppSettings.Get("Password");
+            string sAttr1 = ConfigurationManager.AppSettings.Get("Username");
+           string sAttr2 = ConfigurationManager.AppSettings.Get("Password");
             string actualMessage = "";
-                 driver.FindElement(username).SendKeys(name);
+                 driver.FindElement(username).SendKeys(sAttr1);
                //  log.Debug("Entering Username " + name);
-                 driver.FindElement(password).SendKeys(Pass);
+                 driver.FindElement(password).SendKeys(sAttr2);
                 // log.Debug("Entering Password " + pass);
-            SubmitElement(loginbtn);
+                 SubmitElement(loginbtn);
                  log.Debug("Clicking Login Button ");
                  if (loc == "class")
                  {

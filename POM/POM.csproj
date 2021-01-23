@@ -84,7 +84,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web Pages\AppSetting.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

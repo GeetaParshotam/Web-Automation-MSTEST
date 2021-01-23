@@ -57,7 +57,7 @@ namespace POM
             CorePage.DriverStart();
           // string sAttr = ConfigurationManager.AppSettings.Get("URL");
             
-            loginPage.login("https://adactinhotelapp.com/HotelAppBuild2/","TesterGeeta","TesterGeeta","Logout", "LinkText");
+            loginPage.login("https://adactinhotelapp.com/HotelAppBuild2/","Logout", "LinkText");
         }
         [TestCleanup]
         public void cleanup()
